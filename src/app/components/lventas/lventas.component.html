@@ -1,0 +1,38 @@
+
+  <form #tipoForm= "ngForm" (ngSubmit) = "Find(tipoForm);">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">INGRESE NOMBRE DE CLIENTE</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="nombre" [(ngModel)]="_ventasService.FindVentas.nombre">
+    </div>
+    <button hidden class="btn btn-primary">BUSCAR</button>
+
+  </form>
+ 
+  
+  
+   
+ 
+  
+  <div class="col s5">
+      <table  class="table">
+        <thead>
+          <th>N°</th>
+          <th>CANTIDAD</th>
+          <th>PRODUCTO</th>
+          <th>PRECIO</th>
+        </thead>
+        <tbody>
+         <tr *ngFor= "let list of lists; let indice = index"> 
+          <td>{{indice+1}}</td>
+          <td>{{list.CANTIDAD}}</td>
+          <td>{{list.NOMBRE}}</td>
+          <td>{{list.PRECIO}}</td>
+         
+         
+        
+        </tbody>
+      
+      </table>
+  
+  
+    </div>

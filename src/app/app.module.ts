@@ -16,7 +16,9 @@ import { InterceptorService } from './interceptores/interceptor.service';
 import { UploadsComponent } from './components/uploads/uploads.component';
 import { InterceptorErrorService } from './interceptores/interceptorerror.service';
 
+
 import { RenosComponent } from './components/renos/renos.component';
+import { LventasComponent } from './components/lventas/lventas.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { RenosComponent } from './components/renos/renos.component';
     LoginComponent,
     ProductoComponent,
     UploadsComponent,
-    RenosComponent
+    RenosComponent,
+    LventasComponent
+
   ],
   imports: [
     CommonModule,
@@ -36,7 +40,8 @@ import { RenosComponent } from './components/renos/renos.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     RolService,AuthService,

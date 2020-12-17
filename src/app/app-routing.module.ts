@@ -7,13 +7,15 @@ import { UploadsComponent } from './components/uploads/uploads.component';
 import {AuthrutasGuard} from './../app/services/guards/authrutas.guard';
 import { RoleGuard } from './services/guards/role.guard';
 import { RenosComponent } from './components/renos/renos.component';
+import { LventasComponent } from './components/lventas/lventas.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path: 'listar', component: ListarComponent, canActivate:[AuthrutasGuard, RoleGuard], data:{role:'ADMIN'}},
   {path:'producto', component:ProductoComponent, canActivate:[AuthrutasGuard, RoleGuard], data:{role:'ADMIN'}},
   {path: 'uploads', component: UploadsComponent, canActivate:[AuthrutasGuard, RoleGuard], data:{role:'ADMIN'}},
-  {path: 'renos', component: RenosComponent, canActivate: [AuthrutasGuard, RoleGuard], data :{role : 'ROBA CHIMENEA'}}
+  {path: 'renos', component: RenosComponent, canActivate: [AuthrutasGuard, RoleGuard], data :{role : 'ROBA CHIMENEA'}},
+  {path: 'ventas', component: LventasComponent, canActivate: [AuthrutasGuard, RoleGuard], data :{role : 'GERENTE VENTAS'}}
 
 ];
 
